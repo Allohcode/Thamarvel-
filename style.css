@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+:root {
+  --red: #f25353;
+  --black: #0f1218;
+  --white: #f4f4f4;
+  --light-color: rgb(203, 200, 200);
+  --box-shadow: 0 0.5rem 1.5rem rgba(155, 153, 153, 0.893);
+  --box-shadow2: 0 0.5rem 1.5rem rgba(52, 51, 51, 0.893);
+  --big-font: 5rem;
+  --h2-font: 3rem;
+  --p-font: 1.1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  overflow-x: hidden;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  scroll-padding: 5.5rem;
+  scroll-behavior: smooth;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+}
+
+.btn {
+  background-color: var(--red);
+  padding: 4px 20px;
+  color: var(--white);
+
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: ease 0.4s;
+}
+.btn:hover {
+  background-color: var(--white);
+  color: var(--red);
+}
+
+.top-btn {
+  background-color: transparent;
+  padding: 4px 20px;
+  color: var(--white);
+  border: 0.1rem solid var(--white);
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: ease 0.4s;
+}
+
+.top-btn:hover {
+  background-color: var(--white);
+  color: var(--red);
+}
+
+/* header  */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: var(--red);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+}
+
+.logo img {
+  max-width: 100%;
+  width: 120px;
+}
+
+.nav-link ul {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+}
+.nav-link ul li {
+  list-style: none;
+}
+.nav-link ul li a {
+  text-decoration: none;
+  color: var(--white);
+  padding: 10px 27px;
+  font-weight: 500;
+}
+
+.nav-link a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--white);
+  bottom: -3px;
+  left: 0;
+  transition: ease 0.4s;
+}
+
+.nav-link a:hover::after {
+  width: 100%;
+}
+
+#nav-bar {
+  font-size: 35px;
+  color: var(--white);
+  z-index: 10001;
+  cursor: pointer;
+  display: none;
+}
+
+/* section home */
+.section-img {
+  background: linear-gradient(rgba(52, 48, 47, 0.75), rgba(0, 0, 0, 0.75)),
+    url(./images/back2.jpg) center/cover;
+}
+
+.section {
+  padding: 5rem 2rem;
+}
+.about-home {
+  margin-top: 2rem;
+}
+
+.home {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-info {
+  text-align: left;
+  letter-spacing: 1px;
+  color: var(--white);
+}
+
+.home-info h1 {
+  margin: 10px 0 25px;
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.home-info h5 {
+  margin-bottom: 23px;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.home-info h3 {
+  color: var(--red);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.home-info span {
+  color: var(--red);
+}
+
+.home-photo img {
+  width: 300px;
+
+  border-radius: 20px;
+}
+
+.home-info p {
+  font-size: 16px;
+  color: #fff;
+  line-height: 28px;
+  margin-bottom: 2rem;
+}
+
+/* footer */
+.footer {
+  background-color: var(--red);
+}
+
+footer {
+  padding: 0.7rem 2rem;
+}
+
+.footer-info i {
+  color: var(--white);
+  font-size: 23px;
+  margin: 1rem;
+  text-align: center;
+}
+
+.footer p {
+  margin-bottom: 1rem;
+  letter-spacing: 1rem;
+  font-size: 12px;
+}
+
+span {
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1425px) {
+  header {
+    padding: 16px 3%;
+    transition: 0.3s;
+  }
+
+  header.sticky {
+    padding: 10px 3%;
+    transition: 0.3s;
+  }
+}
+
+@media (max-width: 970px) {
+  #nav-bar {
+    display: block;
+  }
+  .home {
+    display: block;
+    padding: 5rem 0;
+    min-height: 80vh;
+  }
+  .home-info {
+    padding-bottom: 2rem;
+  }
+  .nav-link ul {
+    display: block;
+  }
+  .nav-link {
+    position: absolute;
+    top: -600px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: rgb(56, 56, 56);
+    text-align: right;
+    transition: all 0.4s;
+  }
+
+  .nav-link a {
+    display: block;
+    padding: 1.2rem;
+    margin: 1.5rem;
+    border-right: 2px solid var(--white);
+    color: var(--white);
+  }
+  .nav-link a:hover {
+    background-color: var(--white);
+    color: var(--red);
+  }
+
+  .nav-link a::after {
+    display: none;
+  }
+
+  .home {
+    margin-top: -5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .home {
+    grid-template-columns: 1fr;
+    min-height: 130vh;
+    grid-gap: 1rem;
+  }
+  .home-info {
+    padding-top: 55px;
+  }
+  .home-photo img {
+    text-align: center;
+  }
+  .nav-link.active {
+    top: 100%;
+  }
+}
+
+/* music page  */
+
+/* music page end */
+
+.music {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+/* tour */
+.section-tour {
+  background: url(./images/back1.jpg) center/cover;
+}
+.carusel-container {
+  width: 55%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  border: 5px solid var(--white);
+  margin-top: 3rem;
+  margin-bottom: -1rem;
+}
+
+.carusel-slide {
+  display: flex;
+  width: 100%;
+  height: 500px;
+}
+
+#prebtn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  left: 5%;
+  font: 30px;
+  color: var(--white);
+  cursor: pointer;
+}
+#nxtbtn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  right: 5%;
+  font: 30px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+@media (max-width: 920px) {
+  .carusel-container {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .carusel-slide {
+    display: flex;
+    width: 60%;
+    height: 400px;
+  }
+}
+
+/* music section
+ */
+
+.section h2 {
+  color: var(--white);
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.underline {
+  background-color: var(--red);
+  width: 10%;
+  height: 5px;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.page-dis {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  letter-spacing: 2;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.music-section p {
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 2;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.music {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.music-img img {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.music p {
+  color: var(--white);
+  letter-spacing: 2;
+  font-size: 16px;
+  margin-top: 1rem;
+}
+
+.red {
+  color: var(--red);
+  font-size: 20px;
+}
